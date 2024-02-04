@@ -1,0 +1,17 @@
+---
+
+
+services:
+  thing:
+    build:
+      args:
+        group_id: '${GROUP_ID:?}'
+        group_name: '${GROUP_NAME:?}'
+        user_id: '${USER_ID:?}'
+        user_name: '${USER_NAME:?}'
+      context: '.'
+    volumes:
+      - './app:/home/${USER_NAME}/app:rw'
+
+
+...  # EOF
